@@ -11,4 +11,4 @@ then
 echo ‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡ | lolcat
 echo '[+] Successful, now your files are globally available :)' | lolcat
 ssh -o "ExitOnForwardFailure yes" -R 80:localhost:4545 ssh.localhost.run
-
+fi
