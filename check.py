@@ -11,7 +11,7 @@ def check():
  if res:
      os.system("clear")
      print("Please check your Internet connection")
-     os.kill(os.getppid(), signal.SIGHUP)
+     os.kill(os.getppid(), signal.SIGINT)
 check()
 exit()
 
