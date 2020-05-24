@@ -23,7 +23,8 @@
 
 3. Open up a new session, and type "msfconsole -r automate.rc", this should start metasploit and   provide it necessary options. Once it stops, type "run" and press enter, this will start the   listener.
 
-4. When the target installs and opensthe apk using your link, you will get a meterpreter session in your listener.
+4. When the target installs and opens the apk using your link, you will get a meterpreter session in your listener.
 
 5. Now you can type 'help' for a list of options, example extract contacts, snap a picture etc.
 
+6. Must only be used legally.
