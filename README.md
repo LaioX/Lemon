@@ -25,5 +25,5 @@
 
 4. When the target installs and open the apk using your link, you will get a meterpreter session in your listener.
 
-5. Bow you can type 'help' for a list of options, example extract contacts, snap a picture etc.
+5. Now you can type 'help' for a list of options, example extract contacts, snap a picture etc.
 
