@@ -4,6 +4,7 @@ clear
 pkg install php
 clear
 pkg install python
+pip install requests
 clear && cp attack.py $HOME
 cd
 chmod +x attack.py
