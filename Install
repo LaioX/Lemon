@@ -1,0 +1,29 @@
+clear
+pkg install openssh
+clear
+pkg install php
+clear
+pkg install python
+clear && cp attack.py $HOME
+cd
+chmod +x attack.py
+clear
+echo Do you have Metasploit Installed?
+read -p '>> ' ans
+if [ $ans = no ]
+then
+echo Do you want to install Metasploit?
+read -p '>>' asw
+if [ $asw = yes ]
+then
+echo Installing Metasploit.. && pkg install unstable-repo && clear
+pkg install metasploit
+fi
+fi
+
+
+
+
+
+
+
