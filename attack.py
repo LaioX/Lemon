@@ -11,7 +11,7 @@ R='\033[1;31m'
 
 cycle = ['|', '/', '-', '\\']
 
-string = 'Generating payload ..'
+string = '[*] Generating payload ..'
 
 list = []
 
